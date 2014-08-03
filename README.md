@@ -1,4 +1,4 @@
-ultisnips-snippets
+UltiSnips Snippets
 ==================
 
-My snippets for the UltiSnips vim plugin
+My personal snippets for the [UltiSnips](https://github.com/SirVer/ultisnips) vim plugin.
