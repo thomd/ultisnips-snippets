@@ -1,0 +1,7 @@
+snippet #! "hashbang with stop-on-error and debugging trigger" b
+#!/usr/bin/env bash
+set -e
+[ -n "${1:`!p snip.rv = snip.basename.upper()`}_DEBUG" ] && set -x
+
+$0
+endsnippet
