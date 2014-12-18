@@ -1,11 +1,15 @@
 snippet gur "require gulp" b
-var ${1:gulp} = require('gulp-$1');
+var ${1:gulp} = require('gulp${2:-$1}');
 $0
 endsnippet
-snippet gut "a gulp task" b
+snippet gut "gulp task" b
 gulp.task('${1:default}', function(){
 	$0
 })
+endsnippet
+snippet gus "gulp src" b
+return gulp.src('$1')
+$0
 endsnippet
 snippet gup "gulp pipe with string arg" b
 .pipe($1(${2:'$3'}))
@@ -14,4 +18,7 @@ endsnippet
 snippet gupp "gulp pipe with object arg" b
 .pipe($1(${2:{$3: ${4:‘$5‘}}}))
 $0
+endsnippet
+snippet gud "gulp destination" b
+.pipe(gulp.dest('$1'))$0
 endsnippet
