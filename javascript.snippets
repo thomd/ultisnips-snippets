@@ -7,8 +7,8 @@ var ${1:gulp} = require('gulp${2:-$1}');
 $0
 endsnippet
 snippet gut "gulp task" b
-gulp.task('${1:default}', function(${2:callback}) {
-	$0
+gulp.task('${1:default}', ${2:['${3:dependency}'], }function(${4:callback}) {
+$0
 })
 endsnippet
 snippet gus "gulp src" b
@@ -29,4 +29,5 @@ $0
 endsnippet
 snippet us "use strict" b
 'use strict';
+$0
 endsnippet
