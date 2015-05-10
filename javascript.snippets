@@ -1,5 +1,5 @@
 snippet r "require" b
-var ${1:gulp} = require('${2:$1}');
+var ${1:module} = require('${2:$1}');
 $0
 endsnippet
 snippet gur "require gulp" b
@@ -10,6 +10,9 @@ snippet gut "gulp task" b
 gulp.task('${1:default}', ${2:['${3:dependency}'], }function(${4:callback}) {
 $0
 })
+endsnippet
+snippet guw "gulp watch" b
+gulp.watch('$1', ['${2:task}']);
 endsnippet
 snippet gus "gulp src" b
 return gulp.src('$1')
@@ -25,7 +28,6 @@ $0
 endsnippet
 snippet gud "gulp destination" b
 .pipe(gulp.dest('$1'));
-$0
 endsnippet
 snippet us "use strict" b
 'use strict';
