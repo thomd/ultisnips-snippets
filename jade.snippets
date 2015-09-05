@@ -1,0 +1,8 @@
+snippet html "a jade layout page" b
+doctype
+html
+  head
+    link(rel="stylesheet" href="/${1:main.css}")
+  body
+    ${2:!= yield}
+endsnippet
