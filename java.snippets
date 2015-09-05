@@ -1,10 +1,34 @@
-snippet pclass "public class" b
-public class ${1:ClassName} {
+snippet class "class" b
+class ${1:`!p
+snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} } {
   $0
 }
 endsnippet
+
 snippet main "main entry method" b
-  public static void main(String[] args) {
-    System.out.println(args[0]);
-  }
+public static void main(String[] args) {
+  $0
+}
+endsnippet
+
+snippet print "print" b
+System.out.println(${1:args[0]});
+$0
+endsnippet
+
+snippet get "getter"
+public ${1:void} get${2:VarName}() {
+  return this.${2/\w+\s*/\l$0/};
+}
+endsnippet
+
+snippet set "setter"
+public void set${2:VarName}(${3:Type} ${4:value}) {
+  this.${2/\w+\s*/\l$0/} = $4;
+}
+endsnippet
+
+snippet getset "getter & setter"
+public ${1:void} get${2:VarName}() { return this.${2/\w+\s*/\l$0/}; }
+public void set$2($1 ${2/\w+\s*/\l$0/}) { this.${2/\w+\s*/\l$0/} = ${2/\w+\s*/\l$0/}; }
 endsnippet
