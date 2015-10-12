@@ -24,9 +24,9 @@ snippet arg "check for arguments" b
 [ -z "\$1" ] && echo >&2 "${1:argument required!}" && exit 1
 $0
 endsnippet
-snippet red "red string" w
+snippet red "red string to stdout" w
 \033[0;31m$1\033[m
 endsnippet
-snippet grey "red string" w
+snippet grey "grey string to stdout" w
 \033[0;32m$1\033[m
 endsnippet
