@@ -5,26 +5,28 @@ set -e
 
 $0
 endsnippet
-
 snippet f "function"
 function ${1:name}($2) {
-  $3
+$0
 }
 endsnippet
-
 snippet here "here document (here)"
 <<-${2:'${1:TOKEN}'}
-  $0
+$0
 ${1/['"`](.+)['"`]/$1/}
 endsnippet
-
 snippet if "if ... then (if)"
 if ${2:[[ ${1:condition} ]]}; then
-  ${VISUAL}${0:#statements}
+${VISUAL}${0:#statements}
 fi
 endsnippet
-
 snippet arg "check for arguments" b
 [ -z "\$1" ] && echo >&2 "${1:argument required!}" && exit 1
 $0
+endsnippet
+snippet red "red string" w
+\033[0;31m$1\033[m
+endsnippet
+snippet grey "red string" w
+\033[0;32m$1\033[m
 endsnippet
