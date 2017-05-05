@@ -1,9 +1,9 @@
 snippet r "require" b
-var ${1:module} = require('${2:$1}');
+var ${1:module} = require('${2:$1}')
 $0
 endsnippet
 snippet gur "require gulp" b
-var ${1:gulp} = require('gulp${2:-$1}');
+var ${1:gulp} = require('gulp${2:-$1}')
 $0
 endsnippet
 snippet gut "gulp task" b
@@ -12,7 +12,7 @@ $0
 })
 endsnippet
 snippet guw "gulp watch" b
-gulp.watch('$1', ['${2:task}']);
+gulp.watch('$1', ['${2:task}'])
 endsnippet
 snippet gus "gulp src" b
 return gulp.src('$1')
@@ -27,10 +27,10 @@ snippet gupo "gulp pipe with object arg" b
 $0
 endsnippet
 snippet gud "gulp destination" b
-.pipe(gulp.dest('$1'));
+.pipe(gulp.dest('$1'))
 endsnippet
 snippet us "use strict" b
-'use strict';
+'use strict'
 $0
 endsnippet
 snippet me "module exports" b
@@ -39,6 +39,22 @@ $0
 }
 endsnippet
 snippet cl "console.log" b
-console.log(${1:'${2:message}'});
+console.log(${1:'${2:message}'})
 $0
+endsnippet
+snippet imp "import module" b
+import ${1:module} from '${2:$1}'
+$0
+endsnippet
+snippet RC "React Class Component" b
+class ${1:MyCmponent} extends React.Component {
+  render() {
+    return $0
+  }
+}
+endsnippet
+snippet iife "immediatelly invoced function expression" b
+(function($1){
+$0
+})($2)
 endsnippet
