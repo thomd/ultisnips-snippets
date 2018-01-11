@@ -3,7 +3,17 @@ snippet #! "hashbang with stop-on-error and debugging trigger" b
 set -e
 [ -n "$${1:`!p snip.rv = snip.basename.upper()`}_DEBUG" ] && set -x
 
+main() {
+$2
+}
+
+cleanup() {
 $0
+}
+trap cleanup EXIT
+
+main
+exit 0
 endsnippet
 snippet f "function"
 function ${1:name}($2) {
