@@ -8,7 +8,7 @@ $2
 }
 
 cleanup() {
-$0
+  echo doing cleanup
 }
 trap cleanup EXIT
 
@@ -37,6 +37,9 @@ endsnippet
 snippet red "red string to stdout" w
 \033[0;31m$1\033[m
 endsnippet
-snippet grey "grey string to stdout" w
+snippet green "green string to stdout" w
 \033[0;32m$1\033[m
+endsnippet
+snippet grey "grey string to stdout" w
+\033[0;30m$1\033[m
 endsnippet
