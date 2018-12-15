@@ -1,4 +1,4 @@
-snippet #! "hashbang with stop-on-error and debugging trigger" b
+snippet #! "simple bash script template" b
 #!/usr/bin/env bash
 set -e
 [ -n "$${1:`!p snip.rv = snip.basename.upper()`}_DEBUG" ] && set -x
@@ -9,6 +9,23 @@ $2
 
 cleanup() {
   echo doing cleanup
+}
+trap cleanup EXIT
+
+main
+exit 0
+endsnippet
+snippet #!! "bash script template" b
+#!/usr/bin/env bash
+set -e
+[ -n "$${1:`!p snip.rv = snip.basename.upper()`}_DEBUG" ] && set -x
+
+main() {
+# ...
+}
+
+cleanup() {
+# ... remove temporary files, restart services, etc ...
 }
 trap cleanup EXIT
 
